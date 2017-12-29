@@ -35,13 +35,16 @@ std::string hasData(std::string s) {
   return "";
 }
 
-int main(int arcg, char **argv)
+int main()
 {
   uWS::Hub h;
 
   int ts = 0;
- 
-  double k_p=atof(argv[1]), k_i=atof(argv[2]), k_d=atof(argv[3]);
+
+  /*
+   * parameters obtained after expermientation
+   */
+  double k_p=0.06, k_i=0.001, k_d=0.15;
 
   PID pid;
   pid.Init(k_p, k_i, k_d);
@@ -51,7 +54,7 @@ int main(int arcg, char **argv)
    */
   PID cruise_pid;
   cruise_pid.Init(0.05, 0, 0);
-  double ref_speed = atof(argv[4]);
+  double ref_speed = 20;
 
   /*
    * Optimizer. will be used only when OPTIMIZE is defined.
@@ -80,7 +83,7 @@ int main(int arcg, char **argv)
           // j[1] is the data JSON object
           double cte = std::stod(j[1]["cte"].get<std::string>());
           double speed = std::stod(j[1]["speed"].get<std::string>());
-          double angle = std::stod(j[1]["steering_angle"].get<std::string>());
+          // double angle = std::stod(j[1]["steering_angle"].get<std::string>());
           double steer_value = 0;
 
           /*
