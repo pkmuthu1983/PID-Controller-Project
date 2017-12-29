@@ -3,7 +3,7 @@
 #### 1. Source code:
 'src' directory contains the implementation of the PID controller
 (PID.cpp), and optimizer (SGD.cpp). 'build' directory contains the executable
-(pid). It can be run as "./pid <Kp> <Ki> <Kd> <ref_speed>". For ex, "./pid 0.06
+(pid). It can be run as "./pid Kp Ki Kd ref_speed". For ex, "./pid 0.06
 0.001 0.15 20" will maintain the car at 20mph, while steering the car
 successfully.
 
