@@ -35,3 +35,7 @@ double PID::TotalError() {
 	return (i_error);
 }
 
+double PID::getOutput() {
+	return (-pid.Kp * pid.p_error - pid.Kd * pid.d_error - pid.Ki * pid.i_error);
+}
+

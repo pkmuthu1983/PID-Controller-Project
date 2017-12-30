@@ -44,7 +44,7 @@ int main()
   /*
    * parameters obtained after expermientation
    */
-  double k_p=0.06, k_i=0.001, k_d=0.15;
+  double k_p=0.06, k_i=0, k_d=0.15;
 
   PID pid;
   pid.Init(k_p, k_i, k_d);
@@ -98,7 +98,8 @@ int main()
 #endif
 
 	  pid.UpdateError(cte);
-	  steer_value = -pid.Kp * pid.p_error - pid.Kd * pid.d_error - pid.Ki * pid.i_error; // assuming this is in radians
+
+	  steer_value = pid.getOutput(); // assuming this is in radians
  
 	  if (steer_value > 0)
 		steer_value = min(steer_value, deg2rad(25));
@@ -110,7 +111,7 @@ int main()
 	   */
 	  cruise_pid.UpdateError(speed - ref_speed);
 	  double throttle;
-	  throttle = -cruise_pid.Kp * cruise_pid.p_error - cruise_pid.Kd * cruise_pid.d_error - cruise_pid.Ki * cruise_pid.i_error;
+	  throttle = cruise_pid.getOutput();
 
 #ifdef DEBUG
           std::cout << "TS: " << ts++ << ", Incoming CTE: " << cte << " Incoming steering Value: " << angle << " Incoming speed: " << speed << " PID steer: " << rad2deg(steer_value) << ", Throttle: " << throttle << endl;
@@ -119,6 +120,7 @@ int main()
           json msgJson;
           msgJson["steering_angle"] = (steer_value/deg2rad(25));
           msgJson["throttle"] = throttle;
+          msgJson["cte"] = cte;
           auto msg = "42[\"steer\"," + msgJson.dump() + "]";
           std::cout << msg << std::endl;
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
