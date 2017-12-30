@@ -36,6 +36,6 @@ double PID::TotalError() {
 }
 
 double PID::getOutput() {
-	return (-pid.Kp * pid.p_error - pid.Kd * pid.d_error - pid.Ki * pid.i_error);
+	return (-Kp * p_error - Kd * d_error - Ki * i_error);
 }
 
