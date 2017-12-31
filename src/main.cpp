@@ -2,13 +2,13 @@
 #include <iostream>
 #include "json.hpp"
 #include "PID.h"
-#include "SGD.h"
+#include "TWD.h"
 #include <math.h>
 
 // #define OPTIMIZE
 #define TRAIN_LENGTH 1200
 // #define DEBUG
-// #define DEBUG_SGD
+// #define DEBUG_TWD
 // #define DEBUG_PID
 
 // for convenience
@@ -67,9 +67,9 @@ int main()
   init_deltas.push_back(0.0001);
   init_params.push_back(k_d);
   init_deltas.push_back(0.0001);
-  SGD sgd(init_params, TRAIN_LENGTH, init_deltas);
+  TWD twd(init_params, TRAIN_LENGTH, init_deltas);
 
-  h.onMessage([&ts, &pid, &sgd, &cruise_pid, &ref_speed](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
+  h.onMessage([&ts, &pid, &twd, &cruise_pid, &ref_speed](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {
     // "42" at the start of the message means there's a websocket message event.
     // The 4 signifies a websocket message
     // The 2 signifies a websocket event
@@ -94,7 +94,7 @@ int main()
           */
 
 #ifdef OPTIMIZE
-	  sgd.update(cte);
+	  twd.update(cte);
 #endif
 
 	  pid.UpdateError(cte);
@@ -126,8 +126,8 @@ int main()
           ws.send(msg.data(), msg.length(), uWS::OpCode::TEXT);
 
 #ifdef OPTIMIZE
-	  if (sgd.use_new_values) {
-		pid.Init(sgd.k_p, sgd.k_i, sgd.k_d);
+	  if (twd.use_new_values) {
+		pid.Init(twd.k_p, twd.k_i, twd.k_d);
 		std::string reset_msg = "42[\"reset\", {}]";
 		ws.send(reset_msg.data(), reset_msg.length(), uWS::OpCode::TEXT);
 	  }

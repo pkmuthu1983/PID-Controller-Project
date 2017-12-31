@@ -1,8 +1,8 @@
 #include <iostream>
 #include <vector>
-#include "SGD.h"
+#include "TWD.h"
 
-SGD::SGD(vector<double> init_values,
+TWD::TWD(vector<double> init_values,
     int train_len, vector<double> del) {
 
 	train_length = train_len;
@@ -27,7 +27,7 @@ SGD::SGD(vector<double> init_values,
 	cur_ts = 0;
 }
 
-void SGD::update(double error_i) {
+void TWD::update(double error_i) {
 	cur_ts++;
 	if (cur_ts >= train_length/2)
 		cost_till_i += error_i * error_i;
@@ -36,8 +36,8 @@ void SGD::update(double error_i) {
 		costs_incr[state] = cost_till_i;
 		cost_till_i = 0;
 
-#ifdef DEBUG_SGD
-		cout << "SGD DEBUG  Train iter:" << cur_ts/train_length << ", state: " << state << ", COST: " << costs_incr[state] << ", kp: " << k_p << ", ki: " << k_i << ", kd" << k_d << endl;
+#ifdef DEBUG_TWD
+		cout << "TWD DEBUG  Train iter:" << cur_ts/train_length << ", state: " << state << ", COST: " << costs_incr[state] << ", kp: " << k_p << ", ki: " << k_i << ", kd" << k_d << endl;
 #endif
 		update_params();
 		use_new_values = true;
@@ -46,7 +46,7 @@ void SGD::update(double error_i) {
 	}
 }
 
-void SGD::update_params() {
+void TWD::update_params() {
 	unsigned int next_state = state + 1;
 	bool increase = false;
 	unsigned int i;
@@ -87,7 +87,7 @@ void SGD::update_params() {
 	copy_params();
 }
 
-void SGD::copy_params(){
+void TWD::copy_params(){
 	k_p = tmp_params[1];
 	k_i = tmp_params[2];
 	k_d = tmp_params[3];

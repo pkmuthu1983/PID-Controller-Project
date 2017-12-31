@@ -150,32 +150,32 @@ src/PID.cpp.s:
 	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/PID.cpp.s
 .PHONY : src/PID.cpp.s
 
-src/SGD.o: src/SGD.cpp.o
+src/TWD.o: src/TWD.cpp.o
 
-.PHONY : src/SGD.o
+.PHONY : src/TWD.o
 
 # target to build an object file
-src/SGD.cpp.o:
-	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/SGD.cpp.o
-.PHONY : src/SGD.cpp.o
+src/TWD.cpp.o:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/TWD.cpp.o
+.PHONY : src/TWD.cpp.o
 
-src/SGD.i: src/SGD.cpp.i
+src/TWD.i: src/TWD.cpp.i
 
-.PHONY : src/SGD.i
+.PHONY : src/TWD.i
 
 # target to preprocess a source file
-src/SGD.cpp.i:
-	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/SGD.cpp.i
-.PHONY : src/SGD.cpp.i
+src/TWD.cpp.i:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/TWD.cpp.i
+.PHONY : src/TWD.cpp.i
 
-src/SGD.s: src/SGD.cpp.s
+src/TWD.s: src/TWD.cpp.s
 
-.PHONY : src/SGD.s
+.PHONY : src/TWD.s
 
 # target to generate assembly for a file
-src/SGD.cpp.s:
-	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/SGD.cpp.s
-.PHONY : src/SGD.cpp.s
+src/TWD.cpp.s:
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/TWD.cpp.s
+.PHONY : src/TWD.cpp.s
 
 src/main.o: src/main.cpp.o
 
@@ -216,9 +216,9 @@ help:
 	@echo "... src/PID.o"
 	@echo "... src/PID.i"
 	@echo "... src/PID.s"
-	@echo "... src/SGD.o"
-	@echo "... src/SGD.i"
-	@echo "... src/SGD.s"
+	@echo "... src/TWD.o"
+	@echo "... src/TWD.i"
+	@echo "... src/TWD.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

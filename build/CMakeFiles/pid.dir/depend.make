@@ -4,11 +4,11 @@
 CMakeFiles/pid.dir/src/PID.cpp.o: ../src/PID.cpp
 CMakeFiles/pid.dir/src/PID.cpp.o: ../src/PID.h
 
-CMakeFiles/pid.dir/src/SGD.cpp.o: ../src/SGD.cpp
-CMakeFiles/pid.dir/src/SGD.cpp.o: ../src/SGD.h
+CMakeFiles/pid.dir/src/TWD.cpp.o: ../src/TWD.cpp
+CMakeFiles/pid.dir/src/TWD.cpp.o: ../src/TWD.h
 
 CMakeFiles/pid.dir/src/main.cpp.o: ../src/PID.h
-CMakeFiles/pid.dir/src/main.cpp.o: ../src/SGD.h
+CMakeFiles/pid.dir/src/main.cpp.o: ../src/TWD.h
 CMakeFiles/pid.dir/src/main.cpp.o: ../src/json.hpp
 CMakeFiles/pid.dir/src/main.cpp.o: ../src/main.cpp
 

@@ -1,9 +1,9 @@
-#ifndef SGD_H
-#define SGD_H
+#ifndef TWD_H
+#define TWD_H
 
 using namespace std;
 
-class SGD {
+class TWD {
 	int cur_ts;
 	int train_length;
 	int state;
@@ -20,7 +20,7 @@ public:
 	double k_i;
 	bool use_new_values;
 
-	SGD(vector<double>, int, vector<double>);
+	TWD(vector<double>, int, vector<double>);
 	void reset_sgd(vector<double>);
 	void update(double);
 	void update_params();

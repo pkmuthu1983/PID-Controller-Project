@@ -14,15 +14,15 @@ PID.h
 
 /home/praveen/SDND/Term2/PID Controller Project/src/PID.h
 
-/home/praveen/SDND/Term2/PID Controller Project/src/SGD.cpp
+/home/praveen/SDND/Term2/PID Controller Project/src/TWD.cpp
 iostream
 -
 vector
 -
-SGD.h
-/home/praveen/SDND/Term2/PID Controller Project/src/SGD.h
+TWD.h
+/home/praveen/SDND/Term2/PID Controller Project/src/TWD.h
 
-/home/praveen/SDND/Term2/PID Controller Project/src/SGD.h
+/home/praveen/SDND/Term2/PID Controller Project/src/TWD.h
 
 /home/praveen/SDND/Term2/PID Controller Project/src/json.hpp
 algorithm
@@ -89,8 +89,8 @@ json.hpp
 /home/praveen/SDND/Term2/PID Controller Project/src/json.hpp
 PID.h
 /home/praveen/SDND/Term2/PID Controller Project/src/PID.h
-SGD.h
-/home/praveen/SDND/Term2/PID Controller Project/src/SGD.h
+TWD.h
+/home/praveen/SDND/Term2/PID Controller Project/src/TWD.h
 math.h
 -
 

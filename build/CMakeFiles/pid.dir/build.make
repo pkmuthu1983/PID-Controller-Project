@@ -81,28 +81,28 @@ CMakeFiles/pid.dir/src/PID.cpp.o.provides: CMakeFiles/pid.dir/src/PID.cpp.o.requ
 CMakeFiles/pid.dir/src/PID.cpp.o.provides.build: CMakeFiles/pid.dir/src/PID.cpp.o
 
 
-CMakeFiles/pid.dir/src/SGD.cpp.o: CMakeFiles/pid.dir/flags.make
-CMakeFiles/pid.dir/src/SGD.cpp.o: ../src/SGD.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/praveen/SDND/Term2/PID Controller Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pid.dir/src/SGD.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pid.dir/src/SGD.cpp.o -c "/home/praveen/SDND/Term2/PID Controller Project/src/SGD.cpp"
+CMakeFiles/pid.dir/src/TWD.cpp.o: CMakeFiles/pid.dir/flags.make
+CMakeFiles/pid.dir/src/TWD.cpp.o: ../src/TWD.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/praveen/SDND/Term2/PID Controller Project/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/pid.dir/src/TWD.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/pid.dir/src/TWD.cpp.o -c "/home/praveen/SDND/Term2/PID Controller Project/src/TWD.cpp"
 
-CMakeFiles/pid.dir/src/SGD.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pid.dir/src/SGD.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/praveen/SDND/Term2/PID Controller Project/src/SGD.cpp" > CMakeFiles/pid.dir/src/SGD.cpp.i
+CMakeFiles/pid.dir/src/TWD.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/pid.dir/src/TWD.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/praveen/SDND/Term2/PID Controller Project/src/TWD.cpp" > CMakeFiles/pid.dir/src/TWD.cpp.i
 
-CMakeFiles/pid.dir/src/SGD.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pid.dir/src/SGD.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/praveen/SDND/Term2/PID Controller Project/src/SGD.cpp" -o CMakeFiles/pid.dir/src/SGD.cpp.s
+CMakeFiles/pid.dir/src/TWD.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/pid.dir/src/TWD.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/praveen/SDND/Term2/PID Controller Project/src/TWD.cpp" -o CMakeFiles/pid.dir/src/TWD.cpp.s
 
-CMakeFiles/pid.dir/src/SGD.cpp.o.requires:
+CMakeFiles/pid.dir/src/TWD.cpp.o.requires:
 
-.PHONY : CMakeFiles/pid.dir/src/SGD.cpp.o.requires
+.PHONY : CMakeFiles/pid.dir/src/TWD.cpp.o.requires
 
-CMakeFiles/pid.dir/src/SGD.cpp.o.provides: CMakeFiles/pid.dir/src/SGD.cpp.o.requires
-	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/SGD.cpp.o.provides.build
-.PHONY : CMakeFiles/pid.dir/src/SGD.cpp.o.provides
+CMakeFiles/pid.dir/src/TWD.cpp.o.provides: CMakeFiles/pid.dir/src/TWD.cpp.o.requires
+	$(MAKE) -f CMakeFiles/pid.dir/build.make CMakeFiles/pid.dir/src/TWD.cpp.o.provides.build
+.PHONY : CMakeFiles/pid.dir/src/TWD.cpp.o.provides
 
-CMakeFiles/pid.dir/src/SGD.cpp.o.provides.build: CMakeFiles/pid.dir/src/SGD.cpp.o
+CMakeFiles/pid.dir/src/TWD.cpp.o.provides.build: CMakeFiles/pid.dir/src/TWD.cpp.o
 
 
 CMakeFiles/pid.dir/src/main.cpp.o: CMakeFiles/pid.dir/flags.make
@@ -132,14 +132,14 @@ CMakeFiles/pid.dir/src/main.cpp.o.provides.build: CMakeFiles/pid.dir/src/main.cp
 # Object files for target pid
 pid_OBJECTS = \
 "CMakeFiles/pid.dir/src/PID.cpp.o" \
-"CMakeFiles/pid.dir/src/SGD.cpp.o" \
+"CMakeFiles/pid.dir/src/TWD.cpp.o" \
 "CMakeFiles/pid.dir/src/main.cpp.o"
 
 # External object files for target pid
 pid_EXTERNAL_OBJECTS =
 
 pid: CMakeFiles/pid.dir/src/PID.cpp.o
-pid: CMakeFiles/pid.dir/src/SGD.cpp.o
+pid: CMakeFiles/pid.dir/src/TWD.cpp.o
 pid: CMakeFiles/pid.dir/src/main.cpp.o
 pid: CMakeFiles/pid.dir/build.make
 pid: CMakeFiles/pid.dir/link.txt
@@ -152,7 +152,7 @@ CMakeFiles/pid.dir/build: pid
 .PHONY : CMakeFiles/pid.dir/build
 
 CMakeFiles/pid.dir/requires: CMakeFiles/pid.dir/src/PID.cpp.o.requires
-CMakeFiles/pid.dir/requires: CMakeFiles/pid.dir/src/SGD.cpp.o.requires
+CMakeFiles/pid.dir/requires: CMakeFiles/pid.dir/src/TWD.cpp.o.requires
 CMakeFiles/pid.dir/requires: CMakeFiles/pid.dir/src/main.cpp.o.requires
 
 .PHONY : CMakeFiles/pid.dir/requires
